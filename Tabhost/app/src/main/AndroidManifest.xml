@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hientran.tabhost"
+    >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17"
+        />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Tabhost"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.example.hientran.tabhost.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--khai báo cho phần Hình ảnh -->
+        <activity
+            android:name=".HinhanhActivity"
+            android:label="@string/title_activity_hinh_anh"
+             >
+        </activity>
+
+        <!--khai báo cho phần Search-->
+        <activity
+            android:name=".SearchActivity"
+            android:label="@string/title_activity_Search"
+            >
+        </activity>
+        <!-- khai báo cho phần yêu thích-->
+        <activity
+            android:name=".YeuthichActivity"
+            android:label="@string/title_activity_yeu_thich"
+             >
+        </activity>
+    </application>
+</manifest>

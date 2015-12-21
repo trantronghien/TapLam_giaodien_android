@@ -1,0 +1,11 @@
+
+<resources>
+<string name="app_name">DemoAndroid</string>
+<string name="action_settings">Settings</string>
+
+<string name="title_activity_hinh_anh">HinhAnhActivity</string>
+<string name="title_activity_Search">Timkiem</string>
+<string name="title_activity_yeu_thich">Yeuthich</string>
+
+
+</resources>
