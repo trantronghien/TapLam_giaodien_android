@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Thuchanh_textView</string>
+    <string name="chuoi" translatable="false">Xin chào Các Bạn</string>
+</resources>

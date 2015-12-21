@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:stretchColumns="*"
+     tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Tính Tổng và Hiệu"
+        android:textSize="20dp"
+        android:background="#00FF00"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textStyle="bold"
+        android:textColor="#F8F8FF"
+        android:id="@+id/txbt" />
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:layout_alignTop="@+id/txbt"
+        android:layout_width="match_parent"
+        android:layout_height="439dp"
+        android:layout_marginBottom="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Số 1:" />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:id="@+id/editTextso1"
+            android:hint="Nhập số cần tính"
+            android:textColorHint="#DD0000"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/TableRow1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Số 2:" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/editTextso2"
+            android:hint="Nhập số cần tính"
+            android:textColorHint="#FFFF00"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="italic"
+            android:textColor="#F8F8ff"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"
+            android:background="#00008B"
+            android:layout_span="2"
+            android:id="@+id/TextViewkq" />
+    </TableRow>
+
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="117dp"
+        android:weightSum="1"
+        android:background="#339966"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tính Tổng"
+            android:id="@+id/buttontong"
+            android:layout_column="0"
+            android:background="#008080"
+            android:layout_weight="0.15"
+
+            android:onClick="tinhtong"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tính Hiệu"
+            android:id="@+id/buttonhieu"
+            android:background="#FF8247"
+            android:layout_weight="0.30"
+
+            android:onClick="tinhhieu"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nhạc nền "
+            android:id="@+id/checkBoxPlaynhac"
+            android:checked="false"
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="73dp">
+
+        <Button
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:text="Exit"
+            android:id="@+id/buttonexit"
+            android:layout_gravity="center_horizontal"
+
+            android:layout_column="0" />
+    </LinearLayout>
+
+</TableLayout>
+<!-- android:onClick="tinhhieu"  với tính hiệu là tên hàm để xử lý bên file java -->
