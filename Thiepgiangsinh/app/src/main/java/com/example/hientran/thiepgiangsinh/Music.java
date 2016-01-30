@@ -94,13 +94,18 @@ public class Music extends AppCompatActivity {
 
     // bắt sự kiện khi bấm nút back
 /*
-* bị lỗi khi quay về màn hình chính thì dialog bắt không chuẩn xác nữa Vì sao ?*/
+* bị lỗi khi quay về màn hình chính thì dialog bắt không chuẩn xác nữa Vì sao ?
+bởi vì Activity kia vẫn đang hoạt động nên phải dùng 
+main.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+*/
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if(keyCode == event.KEYCODE_BACK)
         {
             song.stop();
-            Intent main = new Intent(Music.this , MainActivity.class);
+            Intent main = new Intent(Music.this.finsh() , MainActivity.class); 
+            main.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(main);
             Toast.makeText(this, "trở về màn hình đầu " , Toast.LENGTH_SHORT).show();
         }
